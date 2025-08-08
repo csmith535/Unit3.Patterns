@@ -23,6 +23,19 @@ export function sumToN(n) {
  */
 export function factorial(n) {
   // TODO
+  if (typeof n !== "number") {
+    return NaN;
+  } else if (n < 0) {
+    return undefined;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    let factorialAnswer = 1;
+    for (let i = 1; i <= n; ++i) {
+      factorialAnswer *= i;
+    }
+    return factorialAnswer;
+  }
 }
 
 /**
