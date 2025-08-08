@@ -46,6 +46,17 @@ export function factorial(n) {
  */
 export function buildNArray(n) {
   // TODO
+  if (typeof n !== "number") {
+    return null;
+  } else if (n <= 0) {
+    return [];
+  } else {
+    let ArrayAnswer = [];
+    for (let i = 0; i < n; ++i) {
+      ArrayAnswer.push(i + 1);
+    }
+    return ArrayAnswer;
+  }
 }
 
 /**
