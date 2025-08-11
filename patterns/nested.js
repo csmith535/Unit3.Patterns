@@ -37,6 +37,22 @@ export function makeBoard(rows, cols) {
  */
 export function makeTriangle(size) {
   // TODO
+  if (typeof size !== "number") {
+    return null;
+  }
+  if (size <= 0) {
+    return [];
+  }
+
+  const triangle = [];
+  for (let i = 1; i <= size; ++i) {
+    const row = [];
+    for (let j = 0; j < i; ++j) {
+      row.push("-");
+    }
+    triangle.push(row);
+  }
+  return triangle;
 }
 
 /**
