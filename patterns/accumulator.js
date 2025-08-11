@@ -109,4 +109,21 @@ export function countPresent(attendance) {
  */
 export function complementDNA(dna) {
   // TODO
+  if (typeof dna !== "string") {
+    return null;
+  }
+
+  let complement = "";
+  for (let i = 0; i < dna.length; ++i) {
+    if (dna[i] === "A") {
+      complement += "T";
+    } else if (dna[i] === "T") {
+      complement += "A";
+    } else if (dna[i] === "C") {
+      complement += "G";
+    } else if (dna[i] === "G") {
+      complement += "C";
+    }
+  }
+  return complement;
 }
