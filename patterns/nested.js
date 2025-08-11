@@ -63,4 +63,17 @@ export function makeTriangle(size) {
  */
 export function countLetter(words, letter) {
   // TODO
+  if (typeof letter !== "string" || words.length === 0) {
+    return 0;
+  }
+
+  let numberOfLetters = 0;
+  for (let i = 0; i < words.length; ++i) {
+    for (let j = 0; j < words[i].length; ++j) {
+      if (words[i][j] === letter) {
+        numberOfLetters += 1;
+      }
+    }
+  }
+  return numberOfLetters;
 }
